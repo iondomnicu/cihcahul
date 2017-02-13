@@ -55,7 +55,7 @@
 			<!-- Recent Works -->
 			<div class="headline"><h2>Activități recente</h2></div>
 			<div class="row margin-bottom-20">
-                             @foreach($articles as $article)
+                         @foreach($recent_posts as $article)
 				<div class="col-md-3 col-sm-6">
 					<div class="thumbnails thumbnail-style thumbnail-kenburn">
 						<div class="thumbnail-img">
@@ -134,7 +134,7 @@
 			<!-- End Info Blokcs -->
 
 			<!-- Owl Clients v1 -->
-			<div class="headline"><h2>Colaboratori</h2></div>
+			<div class="headline"><h2>Parteneri</h2></div>
 			<div class="owl-clients-v1">
 				<div class="item">
 					<img src="{{URL::asset('assets/img/Colaborators/Cisco.jpg')}}" alt="">

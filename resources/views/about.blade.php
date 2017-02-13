@@ -125,8 +125,8 @@
 					<div class="headline-center margin-bottom-60">
 						<h2>ECHIPA MANAGERIALA A COLEGIULUI IULIA HASDEU</h2>
 						</div>
-                                            @foreach($menu as $men)
 						<div class="row team-v3">
+                                                    @foreach($menu as $men)
 							<div class="col-md-4">
 								<div class="team-img">
 									<img class="img-responsive" src="{{$men->image}}" alt="">
@@ -142,9 +142,9 @@
 									</div>
 								</div>
 							</div>
-					
+					@endforeach
 						</div><!--/end row-->
-                                                @endforeach
+                                                
 					</div>
 					<!--=== End Team v3 ===-->
 

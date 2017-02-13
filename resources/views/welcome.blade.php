@@ -38,20 +38,18 @@
 
 	<!-- CSS Customization -->
 	<link rel="stylesheet" href="{{URL::asset('assets/css/custom.css')}}">
-        
-        <link rel="stylesheet" href="{{URL::asset('assets/css/pages/page_contact.css')}}">
-</head>
+	</head>
 
 <body>
-     <div class="top-bar">
+     <div class="navbar navbar-default navbar-fixed-top">
 	<div class="wrapper">
 		<!--=== Header ===-->
 		<div class="header">
 			<div class="container">
 				<!-- Logo -->
-				<p class="logo" href="index.html">
+				<a class="logo" href="{{route('home')}}">
 					<img src="{{URL::asset('assets/img/logocih.png')}}" alt="Logo">
-				</p>
+				</a>
 				<!-- End Logo -->
 
 				<!-- Topbar -->
@@ -59,7 +57,7 @@
 					<ul class="loginbar pull-right">
 						<li class="hoverSelector">
 							<i class="fa fa-globe"></i>
-							<a>Languages</a>
+							<a>Limbi</a>
 							<ul class="languages hoverSelectorBlock">
 								<li class="active">
 									<a href="#">Română <i class="fa fa-check"></i></a>
@@ -191,27 +189,23 @@
 						<!-- End About -->
 
 						<!-- Latest -->
+                                            
 						<div class="col-md-3 md-margin-bottom-40">
+                                                    
 							<div class="posts">
-								<div class="headline"><h2>Latest Posts</h2></div>
+								<div class="headline"><h2>Ultimele postări</h2></div>
 								<ul class="list-unstyled latest-list">
 									<li>
-										<a href="#">Incredible content</a>
-										<small>May 8, 2014</small>
-									</li>
-									<li>
-										<a href="#">Best shoots</a>
-										<small>June 23, 2014</small>
-									</li>
-									<li>
-										<a href="#">New Terms and Conditions</a>
-										<small>September 15, 2014</small>
-									</li>
+										<a href="#">titlu</a>
+										<small>data</small>
+                                                                        </li>
+
 								</ul>
 							</div>
+                                                   
 						</div><!--/col-md-3-->
 						<!-- End Latest -->
-
+                                          
 						<!-- Link List -->
 						<div class="col-md-3 md-margin-bottom-40">
 							<div class="headline"><h2>Categorii</h2></div>
@@ -316,7 +310,7 @@
 	<script type="text/javascript" src="{{URL::asset('assets/js/plugins/owl-carousel.js')}}"></script>
 	<script type="text/javascript" src="{{URL::asset('assets/js/plugins/style-switcher.js')}}"></script>
 	<script type="text/javascript" src="{{URL::asset('assets/js/plugins/parallax-slider.js')}}"></script>
-	<script type="text/javascript">
+        <script type="text/javascript">
 		jQuery(document).ready(function() {
 			App.init();
 			OwlCarousel.initOwlCarousel();

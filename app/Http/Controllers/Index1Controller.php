@@ -14,10 +14,10 @@ class Index1Controller extends Controller
            $specialt=Speciality::select(['denumire','nr'])->get();
            $num=0;
            $sidebar=Article::select(['id','title','date','image','description','views'])->orderBy('views','desc')->limit(2)->get();
-           
+           $latest_events=Article::select(['id','title','date','image','description','views'])->orderBy('date','desc')->limit(4)->get();
            foreach ($specialt as $total){ $num=$total->nr+$num;   }	   
 //dump($num);
-	   return view('index')->with(['articles'=>$message,'specialit'=>$specialt,'numar'=>$num,'sidebar'=>$sidebar,]);
+	   return view('index')->with(['articles'=>$message,'specialit'=>$specialt,'numar'=>$num,'sidebar'=>$sidebar,'recent_posts'=>$latest_events]);
 	   
    }
    
@@ -43,17 +43,15 @@ class Index1Controller extends Controller
        
    }
    
-   public function showspecialities($id){
-       $special=Speciality::select(['id','content'])->where('id',$id)->first();
-       //dump($articl);
-       
-       return view('specialities')->with(['specialit'=>$special,]);
+   public function showspecialities(){
+       return view('specialities');
    }
    public function showmenu(){
-       $menu=Menus::select(['menulist'])->get();
-       //dump($articl);
+      $menu=Menus::select(['menulist'])->get();
+      //dump($articl);
        return view('welcome')->with(['menu'=>$menu]);
    }
+   
  
       public function showadministratia(){
     $menu= Administratia::select(['id','nume','image'])->get();

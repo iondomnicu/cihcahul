@@ -1,10 +1,10 @@
 @extends('welcome')
 @section('content')
 
-		<!-- Google Map -->
-		<div id="map" class="map">
-		</div><!---/map-->
-		<!-- End Google Map -->
+                                <div class="col-md-12">
+					<div id="map" class="map margin-bottom-50"></div>
+					<!-- End Basic Map -->
+				</div>
 
 		<!--=== Content Part ===-->
 		<div class="container content">
@@ -69,13 +69,17 @@
 				</div><!--/col-md-3-->
 			</div><!--/row-->
                 </div>
-@endsection
-<script type="text/javascript">
+        <script type="text/javascript">
 		jQuery(document).ready(function() {
 			App.init();
-			ContactPage.initMap();
-			ContactForm.initContactForm();
-			OwlCarousel.initOwlCarousel();
 			StyleSwitcher.initStyleSwitcher();
+			ContactPage.initMap();
+			ContactPage.initPanorama();
 		});
 	</script>
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+	<script type="text/javascript" src="assets/plugins/gmap/gmap.js"></script>
+        <link rel="stylesheet" href="{{URL::asset('assets/css/pages/page_contact.css')}}">
+        <script src="http://maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyBlCqq2AHWY-ZJJMAI2-gszGP1nHc2tVrA" type="text/javascript"></script>
+
+@endsection
