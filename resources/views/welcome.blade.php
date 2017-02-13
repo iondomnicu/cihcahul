@@ -91,24 +91,24 @@
 
 						<!-- Pages -->
 						<li class="dropdown">
-							<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+							<a href="" class="dropdown-toggle" data-toggle="dropdown">
 								Specialități
 							</a>
 							<ul class="dropdown-menu">
 								<!-- Invoice Page -->
-								<li><a href="page_invoice.html">Informatică</a></li>
+								<li><a href="{{route('specs')}}">Informatică</a></li>
 								<!-- End Invoice Page -->
 
 								<!-- Clients Page -->
-								<li><a href="page_clients.html">Contabilitate</a></li>
+								<li><a href="{{route('specs2')}}">Contabilitate</a></li>
 								<!-- End Clients Page -->
 
 								<!-- Column Pages -->
-								<li><a href="page_3_columns.html">Asistență Socială</a></li>
+								<li><a href="{{route('specs3')}}">Asistență Socială</a></li>
 								<!-- End Column Pages -->
 
 								<!-- Privacy Policy -->
-								<li><a href="page_privacy.html">Arte</a></li>
+								<li><a href="{{route('specs4')}}">Arte</a></li>
 								<!-- End Privacy Policy -->
 							</ul>
 						</li>

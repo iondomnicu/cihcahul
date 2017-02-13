@@ -77,9 +77,8 @@
 			ContactPage.initPanorama();
 		});
 	</script>
-        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
 	<script type="text/javascript" src="assets/plugins/gmap/gmap.js"></script>
         <link rel="stylesheet" href="{{URL::asset('assets/css/pages/page_contact.css')}}">
-        <script src="http://maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyBlCqq2AHWY-ZJJMAI2-gszGP1nHc2tVrA" type="text/javascript"></script>
+        <script src="http://maps.googleapis.com/maps/api/js?sensor=true&key=AIzaSyBlCqq2AHWY-ZJJMAI2-gszGP1nHc2tVrA" type="text/javascript"></script>
 
 @endsection

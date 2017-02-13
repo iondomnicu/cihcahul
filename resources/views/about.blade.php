@@ -165,7 +165,7 @@ Economie - Ecaterina Jolea şef catedră, profesor de discipline economice gr.di
                                                     @foreach($menu as $men)
 							<div class="col-md-4">
 								<div class="team-img">
-									<img class="img-responsive" src="{{$men->image}}" alt="">
+									<img class="img-responsive img_p" src="{{$men->image}}" alt="">
 									<div class="team-hover">
 										<span>Daniel Wearne</span>
 										<small>Technical Director</small>

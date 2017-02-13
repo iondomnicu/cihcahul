@@ -55,6 +55,15 @@ class Index1Controller extends Controller
    public function specs(){
        return view('specialities');
    }
+   public function specs2(){
+       return view('specialities2');
+   }
+   public function specs3(){
+       return view('specialities3');
+   }
+   public function specs4(){
+       return view('specialities4');
+   }
  
       public function showadministratia(){
     $menu= Administratia::select(['id','nume','image'])->get();

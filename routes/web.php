@@ -21,4 +21,7 @@ Route::get('more/{id}','Index1Controller@showarticle')->name('ShowArticle');
 Route::get('specialities/{id}','Index1Controller@showspecialities')->name('ShowSpecialities');
     
 Route::get('specialities','Index1Controller@specs')->name('specs');
+Route::get('specialities2','Index1Controller@specs2')->name('specs2');
+Route::get('specialities3','Index1Controller@specs3')->name('specs3');
+Route::get('specialities4','Index1Controller@specs4')->name('specs4');
 

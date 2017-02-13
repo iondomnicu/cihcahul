@@ -14,15 +14,6 @@
 							<ul class="list-unstyled list-inline blog-info">
 								<li><i class="fa fa-calendar"></i>{{$article->date}}</li>
 								<li><i class="fa fa-pencil"></i>{{$article->author}}</li>
-								</ul>
-							<ul class="list-unstyled list-inline blog-tags">
-								<li>
-									<i class="fa fa-tags"></i>
-									<a href="#">Technology</a>
-									<a href="#">Education</a>
-									<a href="#">Internet</a>
-									<a href="#">Media</a>
-								</li>
 							</ul>
 						</div>
 						<div class="blog-img">
@@ -31,6 +22,7 @@
 						<p>{{$article->description}}</p>
 						<p><a class="btn-u btn-u-small" href="{{route('ShowArticle',['id'=>$article->id])}}"><i class="fa fa-plus-sign"></i> Read More</a></p>
 					</div>
+                                        <hr>
 					<!--End Blog Post-->
                                         @endforeach 
 					<!--Pagination-->
