@@ -52,6 +52,9 @@ class Index1Controller extends Controller
        return view('welcome')->with(['menu'=>$menu]);
    }
    
+   public function specs(){
+       return view('specialities');
+   }
  
       public function showadministratia(){
     $menu= Administratia::select(['id','nume','image'])->get();
