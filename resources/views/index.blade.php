@@ -55,7 +55,7 @@
 			<!-- Recent Works -->
 			<div class="headline"><h2>Activități recente</h2></div>
 			<div class="row margin-bottom-20">
-                         @foreach($recent_posts as $article)
+                         @foreach($sidebar as $article)
 				<div class="col-md-3 col-sm-6">
 					<div class="thumbnails thumbnail-style thumbnail-kenburn">
 						<div class="thumbnail-img">
@@ -79,26 +79,17 @@
 			<div class="row margin-bottom-30">
 				<!-- Welcome Block -->
 				<div class="col-md-8 md-margin-bottom-40">
-					<div class="headline"><h2>Welcome To Unify</h2></div>
+					<div class="headline"><h2>ECVET</h2></div>
 					<div class="row">
 						<div class="col-sm-4">
-							<img class="img-responsive margin-bottom-20" src="assets/img/main/img18.jpg" alt="">
+							<img class="img-responsive margin-bottom-20" src="assets/img/ecvet.jpg" alt="">
 						</div>
 						<div class="col-sm-8">
-							<p>Unify is an incredibly beautiful responsive Bootstrap Template for corporate and creative professionals. It works on all major web browsers, tablets and phone.</p>
-							<ul class="list-unstyled margin-bottom-20">
-								<li><i class="fa fa-check color-green"></i> Donec id elit non mi porta gravida</li>
-								<li><i class="fa fa-check color-green"></i> Corporate and Creative</li>
-								<li><i class="fa fa-check color-green"></i> Responsive Bootstrap Template</li>
-								<li><i class="fa fa-check color-green"></i> Corporate and Creative</li>
-							</ul>
-						</div>
+							<p>EUROPEAN CREDIT SYSTEM FOR VOCATIONAL EDUCATION TRAINING – SISTEMUL EUROPEAN DE CREDITE PENTRU FORMARE EDUCAŢIONALĂ VOCAŢIONALĂ.</p>
+                                                        <p>În perioada actuală de competiţie globală intensă, caracterizată totodată de un număr mare de muncitori slab calificaţi şi de o populaţie îmbătrânită, viitorul Europei trebuie să fie asigurat prin competitivitate şi inovare. </p>
+                                                        <p>Aproape că nu există un alt sector economic în care flexibilitatea şi mobilitatea forţei de muncă să aibă o atât de mare importanţă. În această etapă mobilitatea este îngreunată datorită lipsei unor calificări şi competenţe transparente şi recunoscute, iar în Europa există o nevoie reală de modele care să permită recunoaşterea reciprocă a competenţelor şi abilităţilor.</p>
+                                                </div>
 					</div>
-
-					<blockquote class="hero-unify">
-						<p>Award winning digital agency. We bring a personal and effective approach to every project we work on, which is why. Unify is an incredibly beautiful responsive Bootstrap Template for corporate professionals.</p>
-						<small>CEO, Jack Bour</small>
-					</blockquote>
 				</div><!--/col-md-8-->
 
 				<!-- Latest Shots -->
@@ -107,15 +98,15 @@
 					<div id="myCarousel" class="carousel slide carousel-v1">
 						<div class="carousel-inner">
 							<div class="item active">
-								<img src="{{URL::asset('assets/img/slider/bg1.jpg')}}" alt="">
+								<img src="{{URL::asset('images/index_slider/1.jpg')}}" alt="">
 								
 							</div>
 							<div class="item">
-								<img src="{{URL::asset('assets/img/slider/bg2.jpg')}}" alt="">
+								<img src="{{URL::asset('images/index_slider/2.jpg')}}" alt="">
 								
 							</div>
 							<div class="item">
-								<img src="{{URL::asset('assets/img/slider/bg3.jpg')}}" alt="">
+								<img src="{{URL::asset('images/index_slider/3.jpg')}}" alt="">
 								
 							</div>
 						</div>
@@ -150,6 +141,24 @@
 				</div>
 				<div class="item">
 					<img src="{{URL::asset('assets/img/Colaborators/red_sky.png')}}" alt="">
+				</div>
+                                <div class="item">
+					<img src="{{URL::asset('assets/img/Colaborators/atic.jpg')}}" alt="">
+				</div>
+                                <div class="item">
+					<img src="{{URL::asset('assets/img/Colaborators/crc.png')}}" alt="">
+				</div>
+                                <div class="item">
+					<img src="{{URL::asset('assets/img/Colaborators/me.png')}}" alt="">
+				</div>
+                                <div class="item">
+					<img src="{{URL::asset('assets/img/Colaborators/img.jpg')}}" alt="">
+				</div>
+                                <div class="item">
+					<img src="{{URL::asset('assets/img/Colaborators/prod.png')}}" alt="">
+				</div>
+                                <div class="item">
+					<img src="{{URL::asset('assets/img/Colaborators/contact.jpg')}}" alt="">
 				</div>
 			</div>
 			<!-- End Owl Clients v1 -->

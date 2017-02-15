@@ -13,24 +13,18 @@
 					<!-- Posts -->
 					<div class="posts margin-bottom-40">
 						<div class="headline headline-md"><h2>Recent Posts</h2></div>
-						<dl class="dl-horizontal">
-							<dt><a href="#"><img src="assets/img/sliders/elastislide/6.jpg" alt="" /></a></dt>
+						@foreach($recent as $rec)
+                                                <dl class="dl-horizontal">
+							<dt><a href="{{route('ShowArticle',['id'=>$rec->id])}}"><img src="{{URL::asset($rec->image)}}"></a></dt>
 							<dd>
-								<p><a href="#">Responsive Bootstrap 3 Template placerat idelo alac eratamet.</a></p>
+								<p><a href="#">{{$rec->title}}</a></p>
+                                                                <ul class="list-unstyled list-inline blog-info">
+                                                                    <li><i class="fa fa-calendar"></i>{{$rec->date}}</li>
+                                                                    <li><i class="fa fa-pencil"></i>{{$rec->author}}</li>
+                                                                </ul>
 							</dd>
 						</dl>
-						<dl class="dl-horizontal">
-							<dt><a href="#"><img src="assets/img/sliders/elastislide/10.jpg" alt="" /></a></dt>
-							<dd>
-								<p><a href="#">100+ Amazing Features Layer Slider, Layer Slider, fa fas, 60+ Pages etc.</a></p>
-							</dd>
-						</dl>
-						<dl class="dl-horizontal">
-							<dt><a href="#"><img src="assets/img/sliders/elastislide/11.jpg" alt="" /></a></dt>
-							<dd>
-								<p><a href="#">Developer Friendly Code imperdiet condime ntumi mperdiet condim.</a></p>
-							</dd>
-						</dl>
+						@endforeach
 					</div><!--/posts-->
 					<!-- End Posts -->
                                         

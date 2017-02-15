@@ -195,11 +195,12 @@
 							<div class="posts">
 								<div class="headline"><h2>Ultimele postări</h2></div>
 								<ul class="list-unstyled latest-list">
-									<li>
-										<a href="#">titlu</a>
-										<small>data</small>
+								@foreach($recent as $rec)	
+                                                                    <li>
+										<a href="#">{{$rec->title}}</a>
+										<small>{{$rec->date}}</small>
                                                                         </li>
-
+                                                                  @endforeach  
 								</ul>
 							</div>
                                                    

@@ -1,12 +1,16 @@
 @extends('welcome')
 @section('content')
-
-                                <div class="col-md-12">
-					<div id="map" class="map margin-bottom-50"></div>
-					<!-- End Basic Map -->
-				</div>
-
-		<!--=== Content Part ===-->
+        <link rel="stylesheet" href="assets/css/pages/page_contact.css">
+	<link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css">
+	<link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css">
+	<script src="http://maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyBlCqq2AHWY-ZJJMAI2-gszGP1nHc2tVrA" type="text/javascript"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+        <!-- Google Map -->
+		<div id="map" class="map">
+		</div><!---/map-->
+		<!-- End Google Map -->	
+        <!--=== Content Part ===-->
 		<div class="container content">
 			<div class="row margin-bottom-30">
 				<div class="col-md-9 mb-margin-bottom-30">
@@ -69,16 +73,18 @@
 				</div><!--/col-md-3-->
 			</div><!--/row-->
                 </div>
-        <script type="text/javascript">
+
+	<script type="text/javascript" src="assets/plugins/gmap/gmap.js"></script>
+	<!-- JS Page Level -->
+	<script type="text/javascript" src="assets/js/forms/contact.js"></script>
+	<script type="text/javascript" src="assets/js/pages/page_contacts.js"></script>
+	<script type="text/javascript">
 		jQuery(document).ready(function() {
 			App.init();
-			StyleSwitcher.initStyleSwitcher();
 			ContactPage.initMap();
-			ContactPage.initPanorama();
+			ContactForm.initContactForm();
+			OwlCarousel.initOwlCarousel();
+			StyleSwitcher.initStyleSwitcher();
 		});
 	</script>
-	<script type="text/javascript" src="assets/plugins/gmap/gmap.js"></script>
-        <link rel="stylesheet" href="{{URL::asset('assets/css/pages/page_contact.css')}}">
-        <script src="http://maps.googleapis.com/maps/api/js?sensor=true&key=AIzaSyBlCqq2AHWY-ZJJMAI2-gszGP1nHc2tVrA" type="text/javascript"></script>
-
 @endsection

@@ -49,6 +49,9 @@
 					</div>
 
 					<div class="row">
+                                            <div class="text-center" style="margin-bottom: 30px;">
+                                            <img src="assets/img/Info_sp/cx.png" alt="">
+                                            </div>
 						<div class="about">
 							<p class="text-justify">Traiectoria acestei instituţii a evoluat cu zigzaguri, ce au implicat şi modificări structurale. E considerată drept cea mai veche instituţie de învatamînt pedagogic din republică. Realizările noastre substanţiale au avut ca pat germinativ experienţa fructuoasă acumulată de instituţia cahuleana, care a avut o bună faimă în republică de-a lungul celor 70 de ani de activitate.</p>
                                                         <p class="text-justify">Prestigios a fost întotdeauna, este şi în prezent Colegiul Industrial- Pedagogic din Cahul, reorganizat în anul 2003, în baza Şcolii Pedagogice „A. Macarenco” fondată la 8 mai 1945. in iunie 1992 este formată Şcoala Normală care în august 1996 devine Colegiul de Pedagogie şi Arte „I. Haşdeu”. Din 2003 comasat fiind cu Colegiul Agricol din localitate, se deschide Colegiul Industrial - Pedagogic.</p>
@@ -132,24 +135,24 @@ Economie - Ecaterina Jolea şef catedră, profesor de discipline economice gr.di
 					<div class="container content-sm">
 						<div class="row">
 							<div class="col-md-3 col-xs-6 md-margin-bottom-50">
-								<i class="icon-cup"></i>
+								<i class="fa fa-battery-three-quarters"></i>
 								<span class="counter">265</span>
-								<h4>Coffee's Drunk</h4>
+								<h4>Informatica</h4>
 							</div>
 							<div class="col-md-3 col-xs-6 md-margin-bottom-50">
-								<i class="icon-clock"></i>
-								<span class="counter">5957</span>
-								<h4>Working Hours</h4>
+								<i class="fa fa-eur"></i>
+								<span class="counter">216</span>
+								<h4>Contabilitate</h4>
 							</div>
 							<div class="col-md-3 col-xs-6">
-								<i class="icon-emoticon-smile"></i>
-								<span class="counter">3495</span>
-								<h4>Happy Clients</h4>
+								<i class="fa fa-users"></i>
+								<span class="counter">326</span>
+								<h4>Asistenta Sociala</h4>
 							</div>
 							<div class="col-md-3 col-xs-6">
-								<i class="icon-bulb"></i>
-								<span class="counter">576</span>
-								<h4>New Ideas</h4>
+								<i class="fa fa-file-image-o"></i>
+								<span class="counter">197</span>
+								<h4>Arte</h4>
 							</div>
 						</div><!--/end row-->
 					</div><!--/end container-->

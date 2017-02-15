@@ -92,6 +92,6 @@ select::-ms-expand {
  width: 360px;
 }
 
-.info_foto{
-    
+.img-responsive{
+    width: 100% !important;
 }

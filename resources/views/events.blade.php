@@ -17,7 +17,7 @@
 							</ul>
 						</div>
 						<div class="blog-img">
-							<img class="img-responsive" src="{{$article->image}}" alt="">
+							<img class="img-responsive event_im" src="{{$article->image}}" alt="">
 						</div>
 						<p>{{$article->description}}</p>
 						<p><a class="btn-u btn-u-small" href="{{route('ShowArticle',['id'=>$article->id])}}"><i class="fa fa-plus-sign"></i> Read More</a></p>
