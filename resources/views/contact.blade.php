@@ -16,7 +16,7 @@
 				<div class="col-md-9 mb-margin-bottom-30">
 					<div class="headline"><h2>Contacte</h2></div>
 					
-					<form action="assets/php/sky-forms-pro/demo-contacts-process.php" method="post" id="sky-form3" class="sky-form contact-style">
+					<form>
 						<fieldset class="no-padding">
 							<label>Nume <span class="color-red">*</span></label>
 							<div class="row sky-space-20">

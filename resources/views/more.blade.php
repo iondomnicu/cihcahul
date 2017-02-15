@@ -10,13 +10,15 @@
                                             @if($article)
 						<!-- News v3 -->
 						<div class="news-v3 bg-color-white margin-bottom-30">
-							<img class="img-responsive full-width" src="{{URL::asset($article->image)}}" alt="">
-							<div class="news-v3-in">
-								<ul class="list-inline posted-info">
+                                                    <h2><a href="#">{{$article->title}}</a></h2>
+                                                    <ul class="list-inline posted-info">
 									<li>By <a href="#">{{$article->author}}</a></li>
 									<li>Postat {{$article->date}}</li>
 								</ul>
-								<h2><a href="#">{{$article->title}}</a></h2>
+							<img class="img-responsive full-width" src="{{URL::asset($article->image)}}" alt="">
+							<div class="news-v3-in">
+								
+								
 								<p>{!!$article->content!!}</p>
 							</div>
 						</div>
