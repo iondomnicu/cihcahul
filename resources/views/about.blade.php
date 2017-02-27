@@ -14,7 +14,7 @@
 		<div class="container content-sm">
 			<div class="title-v1 no-margin-bottom">
 				<p class="no-margin-bottom">Adevarata educatie trebuie sa fie in cele din urma rezervata numai oamenilor care insista a cunoaste, restul nereprezentand decat ducerea la pascut a unei turme de oi</p>
-				</div>
+			</div>
 			</div>
 			<!--=== End Title v1 ===-->
 
@@ -50,7 +50,7 @@
 
 					<div class="row">
                                             <div class="text-center" style="margin-bottom: 30px;">
-                                            <img src="assets/img/Info_sp/cx.png" alt="">
+                                            <img  class="img-responsive" src="assets/img/Info_sp/cx.jpg" alt="">
                                             </div>
 						<div class="about">
 							<p class="text-justify">Traiectoria acestei instituţii a evoluat cu zigzaguri, ce au implicat şi modificări structurale. E considerată drept cea mai veche instituţie de învatamînt pedagogic din republică. Realizările noastre substanţiale au avut ca pat germinativ experienţa fructuoasă acumulată de instituţia cahuleana, care a avut o bună faimă în republică de-a lungul celor 70 de ani de activitate.</p>
@@ -163,28 +163,24 @@ Economie - Ecaterina Jolea şef catedră, profesor de discipline economice gr.di
 				<div class="container content-sm">
 					<div class="headline-center margin-bottom-60">
 						<h2>ECHIPA MANAGERIALA A COLEGIULUI IULIA HASDEU</h2>
-						</div>
-						<div class="row team-v3">
-                                                    @foreach($menu as $men)
-							<div class="col-md-4">
-								<div class="team-img">
-									<img class="img-responsive img_p" src="{{$men->image}}" alt="">
-									<div class="team-hover">
-										<span>Daniel Wearne</span>
-										<small>Technical Director</small>
-										<p>Lorem ipsum dolor sit ame con sectetur adipisci ng e lit.</p>
-										<ul class="list-inline team-social-v3">
-											<li><a href="#"><i class="rounded-x fa fa-twitter"></i></a></li>
-											<li><a href="#"><i class="rounded-x fa fa-facebook"></i></a></li>
-											<li><a href="#"><i class="rounded-x fa fa-google-plus"></i></a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-					@endforeach
-						</div><!--/end row-->
-                                                
 					</div>
+                                 			<div class="bg-color-light">
+				
+					<div class="row team-v4" >
+                                            @foreach($menu as $a)
+						<div class="col-md-4 col-sm-6 md-margin-bottom-50" style="height:353px;">
+							<img class="img-responsive" src="{{$a->image}}" alt="">
+							<span>{{$a->nume}}</span>
+							<small>- {{$a->functie}} -</small>
+							<p>{{$a->descriere}}</p>
+						</div>
+                                             @endforeach
+					</div>
+				
+			</div>   
+                                    
+                                                
+				</div>
 					<!--=== End Team v3 ===-->
 
 					

@@ -206,7 +206,7 @@ body.header-fixed-space-default {
 .header .navbar-toggle,
 .header .navbar-toggle:hover,
 .header .navbar-toggle:focus {
-	background: #72c02c;
+	background: #93a2de;
 	padding: 6px 10px 2px;
 }
 
@@ -237,7 +237,7 @@ body.header-fixed-space-default {
 }
 
 .header .navbar-nav > .active > a {
-	color: #72c02c;
+	color: #93a2de;
 }
 
 @media (min-width: 992px) {
@@ -363,13 +363,13 @@ body.header-fixed-space-default {
 	}
 
 	.header .navbar-nav > li > a:hover {
-		color: #72c02c;
+		color: #93a2de;
 	}
 
 	.header .navbar-nav > .active > a,
 	.header .navbar-nav > .active > a:hover,
 	.header .navbar-nav > .active > a:focus {
-		background: #72c02c;
+		background: #93a2de;
 		color: #fff !important;
 	}
 
@@ -413,7 +413,7 @@ body.header-fixed-space-default {
 	.header .navbar-nav > .active > a {
 		bottom: -2px;
 		position: relative;
-		border-bottom: solid 2px #72c02c;
+		border-bottom: solid 2px #93a2de;
 	}
 
 	.header .navbar-nav > li > a,
@@ -428,11 +428,11 @@ body.header-fixed-space-default {
 	.header .navbar-nav > .open > a,
 	.header .navbar-nav > .open > a:hover,
 	.header .navbar-nav > .open > a:focus {
-		color: #72c02c;
+		color: #93a2de;
 	}
 
 	.header .navbar-nav > li:hover > a {
-        color: #72c02c;
+        color: #93a2de;
     }
 
 	/*Dropdown Menu*/
@@ -442,7 +442,7 @@ body.header-fixed-space-default {
 		min-width: 200px;
 		border-radius: 0;
 		z-index: 9999 !important;
-		border-top: solid 2px #72c02c;
+		border-top: solid 2px #93a2de;
 		border-bottom: solid 2px #687074;
 	}
 
@@ -593,9 +593,9 @@ body.header-fixed-space-default {
 }
 
 .header .nav > li > .search:hover {
-	color: #72c02c;
+	color: #93a2de;
 	background: #f7f7f7;
-	border-bottom-color: #72c02c;
+	border-bottom-color: #93a2de;
 }
 
 .header .nav .search-open {
@@ -910,7 +910,7 @@ body.header-fixed-space-default {
 	}
 
 	.header.header-dark .navbar-nav .dropdown > a:hover {
-		color: #72c02c;
+		color: #93a2de;
 		background: inherit;
 	}
 
@@ -944,7 +944,7 @@ body.header-fixed-space-default {
 @media (min-width: 992px) {
 	.header.header-dark .navbar-nav > li > a:hover,
 	.header.header-dark .navbar-nav > .active > a {
-		color: #72c02c !important;
+		color: #93a2de !important;
 	}
 
 	.header.header-dark .dropdown-menu {

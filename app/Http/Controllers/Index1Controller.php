@@ -74,7 +74,7 @@ class Index1Controller extends Controller
    }
  
       public function showadministratia(){
-    $menu= Administratia::select(['id','nume','image'])->get();
+    $menu= Administratia::select(['id','nume','functie','descriere','image'])->get();
        //dump($articl);
     $latest_events=Article::select(['id','title','date','image','description','views'])->orderBy('date','desc')->limit(3)->get();
        return view('about')->with(['menu'=>$menu,'recent'=>$latest_events]);

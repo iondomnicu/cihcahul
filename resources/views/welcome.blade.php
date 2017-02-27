@@ -212,7 +212,7 @@
 							<div class="headline"><h2>Categorii</h2></div>
 							<ul class="list-unstyled link-list">
 								<li><a href="{{route('despre')}}">Despre</a><i class="fa fa-angle-right"></i></li>
-								<li><a href="#">Specialități</a><i class="fa fa-angle-right"></i></li>
+								<li><a href="#">Admitere</a><i class="fa fa-angle-right"></i></li>
 								<li><a href="{{route('events')}}">Evenimente</a><i class="fa fa-angle-right"></i></li>
 								<li><a href="http://orar.cihcahul.md/">Orar</a><i class="fa fa-angle-right"></i></li>
 								<li><a href="{{route('contact')}}">Contacte</a><i class="fa fa-angle-right"></i></li>
