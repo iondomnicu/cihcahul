@@ -97,18 +97,11 @@
 					<div class="headline"><h2>Ultimele Poze</h2></div>
 					<div id="myCarousel" class="carousel slide carousel-v1">
 						<div class="carousel-inner">
-							<div class="item active">
-								<img src="{{URL::asset('images/index_slider/1.jpg')}}" alt="">
-								
-							</div>
+<!--                                                   @foreach($carousel as $c)-->
 							<div class="item">
-								<img src="{{URL::asset('images/index_slider/2.jpg')}}" alt="">
-								
+<!--								<img src="{{$c->image}}" alt="">-->
 							</div>
-							<div class="item">
-								<img src="{{URL::asset('images/index_slider/3.jpg')}}" alt="">
-								
-							</div>
+<!--                                                    @endforeach-->
 						</div>
 
 						<div class="carousel-arrow">

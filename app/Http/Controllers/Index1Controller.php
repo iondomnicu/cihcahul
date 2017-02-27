@@ -7,6 +7,7 @@ use App\Article;
 use App\Speciality;
 use App\Menus;
 use App\Administratia;
+
 class Index1Controller extends Controller
 {
    public function index(){
@@ -14,10 +15,11 @@ class Index1Controller extends Controller
            $specialt=Speciality::select(['denumire','nr'])->get();
            $num=0;
            $sidebar=Article::select(['id','title','date','image','description','views'])->orderBy('views','desc')->limit(4)->get();
+           $m_slider= Article::Select(['id','image'])->get();
            $latest_events=Article::select(['id','title','date','author','image','description','views'])->orderBy('date','desc')->limit(3)->get();
            foreach ($specialt as $total){ $num=$total->nr+$num;   }	   
 //dump($num);
-	   return view('index')->with(['articles'=>$message,'specialit'=>$specialt,'numar'=>$num,'sidebar'=>$sidebar,'recent'=>$latest_events]);
+	   return view('index')->with(['articles'=>$message,'specialit'=>$specialt,'numar'=>$num,'sidebar'=>$sidebar,'recent'=>$latest_events,'carousel'=>$m_slider]);
 	   
    }
    
