@@ -12,7 +12,7 @@
 						<div class="news-v3 bg-color-white margin-bottom-30">
                                                     <h2><a href="#">{{$article->title}}</a></h2>
                                                     <ul class="list-inline posted-info">
-									<li>By <a href="#">{{$article->author}}</a></li>
+								
 									<li>Postat {{$article->date}}</li>
 								</ul>
 							<img class="img-responsive full-width" src="{{URL::asset($article->image)}}" alt="">

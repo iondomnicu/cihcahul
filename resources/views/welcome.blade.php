@@ -29,9 +29,10 @@
 	<link rel="stylesheet" href="{{URL::asset('assets/plugins/animate.css')}}">
 	<link rel="stylesheet" href="{{URL::asset('assets/plugins/line-icons/line-icons.css')}}">
 	<link rel="stylesheet" href="{{URL::asset('assets/plugins/font-awesome/css/font-awesome.min.css')}}">
-	<link rel="stylesheet" href="{{URL::asset('assets/plugins/parallax-slider/css/parallax-slider.css')}}">
+	<link rel="stylesheet" href="{{URL::asset('assets/plugins/fancybox/source/jquery.fancybox.css')}}">
 	<link rel="stylesheet" href="{{URL::asset('assets/plugins/owl-carousel/owl-carousel/owl.carousel.css')}}">
-
+        <link rel="stylesheet" href="{{URL::asset('assets/plugins/revolution-slider/rs-plugin/css/settings.css')}}">
+        
 	<!-- CSS Theme -->
 	<link rel="stylesheet" href="{{URL::asset('assets/css/theme-colors/default.css" id="style_color')}}">
 	<link rel="stylesheet" href="{{URL::asset('assets/css/theme-skins/dark.css')}}">
@@ -106,11 +107,19 @@
 						<!-- End Pages -->
 
 						<!-- Blog -->
-						<li>
-							<a href="#">
+						<!-- Demo Pages -->
+						<li class="dropdown">
+							<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
 								Admitere
 							</a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Comisia de admitere</a></li>
+								<li><a href="#">Condiții de înmatriculare</a></li>
+                                                                <li><a href="#">Calcularea mediei de concurs</a></li>
+                                                                <li><a href="#">Regulament</a></li>
+							</ul>
 						</li>
+						<!-- End Demo Pages -->
 						<!-- End Blog -->
 
 						<!-- Portfolio -->
@@ -188,7 +197,7 @@
 								<ul class="list-unstyled latest-list">
 						         @foreach($reccent as $rec)	
                                                                     <li>
-										<a href="#">{{$rec->title}}</a>
+										<a href="{{route('ShowArticle',['id'=>$rec->id])}}">{{$rec->title}}</a>
 										<small>{{$rec->date}}</small>
                                                                         </li>
                                                                   @endforeach  
@@ -292,23 +301,29 @@
 	<!-- JS Implementing Plugins -->
 	<script type="text/javascript" src="{{URL::asset('assets/plugins/back-to-top.js')}}"></script>
 	<script type="text/javascript" src="{{URL::asset('assets/plugins/smoothScroll.js')}}"></script>
-	<script type="text/javascript" src="{{URL::asset('assets/plugins/parallax-slider/js/modernizr.js')}}"></script>
-	<script type="text/javascript" src="{{URL::asset('assets/plugins/parallax-slider/js/jquery.cslider.js')}}"></script>
+	<script type="text/javascript" src="{{URL::asset('assets/plugins/jquery.parallax.js')}}"></script>
+	<script type="text/javascript" src="{{URL::asset('assets/plugins/fancybox/source/jquery.fancybox.pack.js')}}"></script>
 	<script type="text/javascript" src="{{URL::asset('assets/plugins/owl-carousel/owl-carousel/owl.carousel.js')}}"></script>
+        <script type="text/javascript" src="{{URL::asset('assets/plugins/revolution-slider/rs-plugin/js/jquery.themepunch.tools.min.js')}}"></script>
+	<script type="text/javascript" src="{{URL::asset('assets/plugins/revolution-slider/rs-plugin/js/jquery.themepunch.revolution.min.js')}}"></script>
 	<!-- JS Customization -->
 	<script type="text/javascript" src="{{URL::asset('assets/js/custom.js')}}"></script>
 	<!-- JS Page Level -->
 	<script type="text/javascript" src="{{URL::asset('assets/js/app.js')}}"></script>
+        <script type="text/javascript" src="{{URL::asset('assets/js/plugins/fancy-box.js')}}"></script>
 	<script type="text/javascript" src="{{URL::asset('assets/js/plugins/owl-carousel.js')}}"></script>
 	<script type="text/javascript" src="{{URL::asset('assets/js/plugins/style-switcher.js')}}"></script>
-	<script type="text/javascript" src="{{URL::asset('assets/js/plugins/parallax-slider.js')}}"></script>
+	<script type="text/javascript" src="{{URL::asset('assets/js/plugins/revolution-slider.js')}}"></script>
+		
         <script type="text/javascript">
-		jQuery(document).ready(function() {
-			App.init();
-			OwlCarousel.initOwlCarousel();
-			StyleSwitcher.initStyleSwitcher();
-			ParallaxSlider.initParallaxSlider();
-		});
+			jQuery(document).ready(function() {
+				App.init();
+				App.initParallaxBg();
+				FancyBox.initFancybox();
+				OwlCarousel.initOwlCarousel();
+				StyleSwitcher.initStyleSwitcher();
+				RevolutionSlider.initRSfullWidth();
+			});
 	</script>
         
 		<!--[if lt IE 9]>

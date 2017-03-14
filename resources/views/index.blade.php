@@ -1,22 +1,40 @@
 @extends('welcome')
 @section('content')
    
-		<!--=== Slider ===-->
-		<div class="slider-inner">
-			<div id="da-slider" class="da-slider">
-                                <div class="da-slide">
-                                </div> 
-				<div class="da-slide">
-				</div>
-				<div class="da-slide">	
-				</div>
-				<div class="da-arrows">
-					<span class="da-arrows-prev"></span>
-					<span class="da-arrows-next"></span>
-				</div>
-			</div>
-		</div><!--/slider-->
-		<!--=== End Slider ===-->
+<!--=== Slider ===-->
+		<div class="tp-banner-container">
+			<div class="tp-banner">
+				<ul>
+							
+              @foreach($slider as $s)
+		<!-- SLIDE -->
+		<li class="revolution-mch-1" data-transition="fade" data-slotamount="5" data-masterspeed="1000">
+			<!-- MAIN IMAGE -->
+			<img src="{{URL::asset($s->image)}}"  alt="darkblurbg"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+	<!-- LAYER -->
+	<div class="sft"
+	data-x="center"
+	data-hoffset="0"
+	data-y="310"
+	data-speed="1600"
+	data-start="2800"
+	data-easing="Power4.easeOut"
+	data-endspeed="300"
+	data-endeasing="Power1.easeIn"
+	data-captionhidden="off"
+	style="z-index: 6">
+        </div>
+                </li>
+            @endforeach
+<!-- END SLIDE -->
+
+</li>
+<!-- END SLIDE -->
+</ul>
+<div class="tp-bannertimer tp-bottom"></div>
+</div>
+</div>
+<!--=== End Slider ===-->
 
 		<!--=== Content Part ===-->
 		<div class="container content-sm">
@@ -97,7 +115,7 @@
 					<div class="headline"><h2>Poze</h2></div>
 					<div id="myCarousel" class="carousel slide carousel-v1">
 						<div class="carousel-inner" role="listbox">
-                                               @foreach($slider as $slide)
+                                               @foreach($m_slider as $slide)
                                                    @if ($slide->id == 1)
                                                <div class="item active">
                                                  @else
@@ -126,16 +144,29 @@
 			</div><!--/row-->
 			<!-- End Info Blokcs -->
 
-			<!-- Owl Clients v1 -->
-			<div class="headline"><h2>Parteneri</h2></div>
-			<div class="owl-clients-v1">
-                            @foreach($partene as $part)
-				<div class="item">
-					<img src="{{URL::asset($part->image)}}" alt="">
-				</div>
-				@endforeach
-			</div>
-			<!-- End Owl Clients v1 -->
+			
+			
+			 <!-- Owl Carousel v2 -->
+                                    <div class="headline"><h2>Parteneri</h2></div>
+					<div class="owl-carousel-v2 owl-carousel-style-v1 margin-bottom-50">
+						<div class="owl-slider-v2">
+                                                      @foreach($partene as $part)
+							<div class="item">
+								<img class="img-responsive" src="{{URL::asset($part->image)}}" alt="">
+							</div>
+                                                      @endforeach
+						</div>
+
+						<div class="owl-navigation">
+							<div class="customNavigation">
+								<a class="owl-btn prev-v2"><i class="fa fa-angle-left"></i></a>
+								<a class="owl-btn next-v2"><i class="fa fa-angle-right"></i></a>
+							</div>
+						</div><!--/navigation-->
+					</div>
+					<!-- End Owl Carousel v2 -->
+                        
+                                 
 		</div><!--/container-->
 		<!-- End Content Part -->
 @endsection

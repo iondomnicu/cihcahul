@@ -9,6 +9,7 @@ use App\Menu;
 use App\Administratia;
 use App\Carousel;
 use App\Partener;
+use App\Main_slider;
 
 class Index1Controller extends Controller
 {
@@ -19,27 +20,34 @@ class Index1Controller extends Controller
            $sidebar=Article::select(['id','title','date','image','description','views'])->orderBy('views','desc')->limit(4)->get();
            $m_slider= Carousel::Select(['id','image'])->get();
            $latest_events=Article::select(['id','title','date','author','image','description','views'])->orderBy('date','desc')->limit(3)->get();
-         $parten= Partener::Select(['id','image'])->get();
+           $parten= Partener::Select(['id','image'])->get();
+           $slider= Main_slider::Select(['id','image'])->get();
          
           $menu=Menu::select(['menulist','id'])->get();
          
-           foreach ($specialt as $total){ $num=$total->nr+$num;   }	   
+           
 //dump($num);
-	   return view('index')->with(['articles'=>$message,'specialit'=>$specialt,'numar'=>$num,'sidebar'=>$sidebar,'reccent'=>$latest_events,'slider'=>$m_slider,'partene'=>$parten,'menu'=>$menu]);
+	   return view('index')->with(['articles'=>$message,'specialit'=>$specialt,'numar'=>$num,'sidebar'=>$sidebar,'reccent'=>$latest_events,'m_slider'=>$m_slider,'partene'=>$parten,'menu'=>$menu,'slider'=>$slider]);
 	   
    }
    
    public function contact(){
+     $specialt=Speciality::select(['denumire','id'])->get();
        $latest_events=Article::select(['id','title','date','image','author','description','views'])->orderBy('date','desc')->limit(3)->get();
-       return view('contact')->with(['recent'=>$latest_events]);
+
+$latest_events=Article::select(['id','title','date','author','image','description','views'])->orderBy('date','desc')->limit(3)->get();
+
+
+
+       return view('contact')->with(['recent'=>$latest_events,'specialit'=>$specialt,'reccent'=>$latest_events]);
    }
    public function show(){
        
-     $article=Article::select(['id','title','content','author','description','date','image','views','tags'])->get();  
+     $article=Article::select(['id','title','content','author','description','date','image','views','tags'])->paginate(5);   $specialt=Speciality::select(['denumire','id'])->get();
      $sidebar=Article::select(['id','title','date','image','description','views'])->orderBy('views','desc')->limit(4)->get();
      $sideb=Speciality::select(['denumire'])->get();
      $latest_events=Article::select(['id','title','date','image','description','views'])->orderBy('date','desc')->limit(3)->get();
-     return view('events')->with(['articles'=>$article,'sidebar'=>$sidebar,'sideb'=>$sideb,'recent'=>$latest_events]);
+     return view('events')->with(['articles'=>$article,'sidebar'=>$sidebar,'sideb'=>$sideb,'recent'=>$latest_events,'specialit'=>$specialt,'reccent'=>$latest_events]);
       
    }
    public function showarticle($id){
@@ -48,9 +56,9 @@ class Index1Controller extends Controller
       $sidebar=Article::select(['id','title','date','image','description','views'])->orderBy('views','desc')->limit(3)->get();
      $sideb=Speciality::select(['id','denumire'])->get();
      $latest_events=Article::select(['id','title','date','image','description','views'])->orderBy('date','desc')->limit(3)->get();
-       
+        $specialt=Speciality::select(['denumire','id'])->get();
     
-       return view('more')->with(['article'=>$articl,'sidebar'=>$sidebar,'sideb'=>$sideb,'article_M'=>$art_M,'recent'=>$latest_events]);
+       return view('more')->with(['article'=>$articl,'sidebar'=>$sidebar,'sideb'=>$sideb,'article_M'=>$art_M,'recent'=>$latest_events,'specialit'=>$specialt,'reccent'=>$latest_events]);
        
    }
    
@@ -72,8 +80,9 @@ class Index1Controller extends Controller
       public function showadministratia(){
     $menu= Administratia::select(['id','nume','functie','descriere','image'])->get();
        //dump($articl);
-    $latest_events=Article::select(['id','title','date','image','description','views'])->orderBy('date','desc')->limit(3)->get();
-       return view('about')->with(['menu'=>$menu,'recent'=>$latest_events]);
+   $specialt=Speciality::select(['denumire','id'])->get();
+   $latest_events=Article::select(['id','title','date','image','description','views'])->orderBy('date','desc')->limit(3)->get();
+       return view('about')->with(['menu'=>$menu,'recent'=>$latest_events,'specialit'=>$specialt,'reccent'=>$latest_events]);
         
        
        
