@@ -95,23 +95,14 @@
 								Specialități
 							</a>
 							<ul class="dropdown-menu">
+                                                            @foreach($specialit as $sidebr)
 								<!-- Invoice Page -->
-								<li><a href="{{route('specs')}}">Informatică</a></li>
-								<!-- End Invoice Page -->
+							<li><a href="{{route('ShowSpecialities',['id'=>$sidebr->id])}}">{{$sidebr->denumire}}</a></li>
+								<!-- End Invoice Page --> @endforeach
 
-								<!-- Clients Page -->
-								<li><a href="{{route('specs2')}}">Contabilitate</a></li>
-								<!-- End Clients Page -->
-
-								<!-- Column Pages -->
-								<li><a href="{{route('specs3')}}">Asistență Socială</a></li>
-								<!-- End Column Pages -->
-
-								<!-- Privacy Policy -->
-								<li><a href="{{route('specs4')}}">Arte</a></li>
-								<!-- End Privacy Policy -->
+								
 							</ul>
-						</li>
+						</li> 
 						<!-- End Pages -->
 
 						<!-- Blog -->
@@ -195,7 +186,7 @@
 							<div class="posts">
 								<div class="headline"><h2>Ultimele postări</h2></div>
 								<ul class="list-unstyled latest-list">
-								@foreach($recent as $rec)	
+						         @foreach($reccent as $rec)	
                                                                     <li>
 										<a href="#">{{$rec->title}}</a>
 										<small>{{$rec->date}}</small>

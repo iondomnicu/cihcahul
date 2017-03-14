@@ -92,17 +92,26 @@
 					</div>
 				</div><!--/col-md-8-->
 
-				<!-- Latest Shots -->
-				<div class="col-md-4">
-					<div class="headline"><h2>Ultimele Poze</h2></div>
+	<!-- Latest Shots -->
+				<div class="col-md-4 md-margin-bottom-20">
+					<div class="headline"><h2>Poze</h2></div>
 					<div id="myCarousel" class="carousel slide carousel-v1">
-						<div class="carousel-inner">
-<!--                                                   @foreach($carousel as $c)-->
-							<div class="item">
-<!--								<img src="{{$c->image}}" alt="">-->
-							</div>
-<!--                                                    @endforeach-->
-						</div>
+						<div class="carousel-inner" role="listbox">
+                                               @foreach($slider as $slide)
+                                                   @if ($slide->id == 1)
+                                               <div class="item active">
+                                                 @else
+                                             <div class="item">
+                                                @endif  
+                                              <img src="{{URL::asset($slide->image)}}" alt="">
+                                               </div>
+                                                 @endforeach
+                                               </div>  
+							
+								
+							
+                                                    
+						
 
 						<div class="carousel-arrow">
 							<a class="left carousel-control" href="#myCarousel" data-slide="prev">
@@ -114,45 +123,17 @@
 						</div>
 					</div>
 				</div><!--/col-md-4-->
-			</div>
+			</div><!--/row-->
 			<!-- End Info Blokcs -->
 
 			<!-- Owl Clients v1 -->
 			<div class="headline"><h2>Parteneri</h2></div>
 			<div class="owl-clients-v1">
+                            @foreach($partene as $part)
 				<div class="item">
-					<img src="{{URL::asset('assets/img/Colaborators/Cisco.jpg')}}" alt="">
+					<img src="{{URL::asset($part->image)}}" alt="">
 				</div>
-				<div class="item">
-					<img src="{{URL::asset('assets/img/Colaborators/allied_testing.jpg')}}" alt="">
-				</div>
-				<div class="item">
-					<img src="{{URL::asset('assets/img/Colaborators/bina.png')}}" alt="">
-				</div>
-				<div class="item">
-					<img src="{{URL::asset('assets/img/Colaborators/microsoft.png')}}" alt="">
-				</div>
-				<div class="item">
-					<img src="{{URL::asset('assets/img/Colaborators/red_sky.png')}}" alt="">
-				</div>
-                                <div class="item">
-					<img src="{{URL::asset('assets/img/Colaborators/atic.jpg')}}" alt="">
-				</div>
-                                <div class="item">
-					<img src="{{URL::asset('assets/img/Colaborators/crc.png')}}" alt="">
-				</div>
-                                <div class="item">
-					<img src="{{URL::asset('assets/img/Colaborators/me.png')}}" alt="">
-				</div>
-                                <div class="item">
-					<img src="{{URL::asset('assets/img/Colaborators/img.jpg')}}" alt="">
-				</div>
-                                <div class="item">
-					<img src="{{URL::asset('assets/img/Colaborators/prod.png')}}" alt="">
-				</div>
-                                <div class="item">
-					<img src="{{URL::asset('assets/img/Colaborators/contact.jpg')}}" alt="">
-				</div>
+				@endforeach
 			</div>
 			<!-- End Owl Clients v1 -->
 		</div><!--/container-->
