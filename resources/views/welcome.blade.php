@@ -113,10 +113,8 @@
 								Admitere
 							</a>
 							<ul class="dropdown-menu">
-								<li><a href="#">Comisia de admitere</a></li>
-								<li><a href="#">Condiții de înmatriculare</a></li>
-                                                                <li><a href="#">Calcularea mediei de concurs</a></li>
-                                                                <li><a href="#">Regulament</a></li>
+                                                                <li><a href="{{URL::asset('assets/regulament_admitere.pdf')}}">Regulament</a></li>
+                                                                <li><a href="#">Aplicația de admitere</a></li>
 							</ul>
 						</li>
 						<!-- End Demo Pages -->

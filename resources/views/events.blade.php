@@ -28,9 +28,8 @@
                                         
 				</div>
 				<!-- End Left Sidebar -->
-                                @include("sidebar")
-			</div><!--/row-->
+                               
+			</div><!--/row--> 
 		</div><!--/container-->
 		<!--=== End Content Part ===-->
-               
 @endsection
